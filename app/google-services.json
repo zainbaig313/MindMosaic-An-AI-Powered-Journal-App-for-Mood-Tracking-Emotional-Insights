@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "387097969941",
+    "project_id": "mindmosaic-5009c",
+    "storage_bucket": "mindmosaic-5009c.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:387097969941:android:b937ee42622e505959551c",
+        "android_client_info": {
+          "package_name": "com.example.mindmosaic"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "387097969941-8p7e9r5f3g2u5f22l388g8ra0eugma6p.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.mindmosaic",
+            "certificate_hash": "3902d40ea119e725fe63d2372e2af620d0edeb83"
+          }
+        },
+        {
+          "client_id": "387097969941-ucnu7rop95tc9c64g32q9m1vianos0pd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCA501mcGozmfCZVWF-klgkSpZ4FL_n3fg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "387097969941-ucnu7rop95tc9c64g32q9m1vianos0pd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

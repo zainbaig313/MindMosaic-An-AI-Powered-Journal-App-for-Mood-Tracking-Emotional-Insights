@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".Insights">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="📊 Mood Insights"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_marginTop="30dp"
+            android:textColor="@color/black"
+            android:gravity="center"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Loading -->
+        <ProgressBar
+            android:id="@+id/loadingProgressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="gone" />
+
+        <!-- Chart -->
+        <com.github.mikephil.charting.charts.BarChart
+            android:id="@+id/moodChart"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_margin="16dp"
+            android:visibility="gone" />
+
+        <!-- Summary -->
+        <LinearLayout
+            android:id="@+id/summaryLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/totalEntriesText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Total Entries: 0"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:id="@+id/mostCommonMoodText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Most Common: None"
+                android:textSize="16sp"
+                android:textColor="@color/black" />
+
+        </LinearLayout>
+
+        <!-- Empty State -->
+        <TextView
+            android:id="@+id/emptyStateText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="📝 No journal entries found.\nStart writing to see your mood trends!"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:gravity="center"
+            android:layout_marginTop="32dp"
+            android:visibility="gone" />
+
+        <!-- Debug Info -->
+        <TextView
+            android:id="@+id/debugText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="12sp"
+            android:textColor="@color/black"
+            android:layout_marginTop="16dp"
+            android:visibility="gone" />
+
+        <!-- Refresh Button -->
+        <Button
+            android:id="@+id/refreshButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="🔄 Load Data"
+            android:textSize="16sp"
+            android:layout_marginTop="16dp" />
+
+
+    </LinearLayout>
+
+</ScrollView>

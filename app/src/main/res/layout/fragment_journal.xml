@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="30dp"
+        android:paddingBottom="32dp">
+
+        <!-- Header -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="🧠 Mood Journal"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Journal Input -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="4dp"
+            android:layout_marginBottom="16dp">
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:hint="How are you feeling today?">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/journalEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:gravity="top|start"
+                    android:inputType="textMultiLine"
+                    android:maxLines="10"
+                    android:scrollbars="vertical"
+                    android:backgroundTint="@color/white" />
+            </com.google.android.material.textfield.TextInputLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Save Button with Loading -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/saveJournalButton"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:text="💾 Save Entry"
+                android:textSize="16sp"
+                app:cornerRadius="12dp"
+                android:backgroundTint="#540A0A"
+                android:textColor="@android:color/white" />
+
+            <ProgressBar
+                android:id="@+id/analysisProgressBar"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_gravity="center"
+                android:visibility="gone" />
+        </FrameLayout>
+
+        <!-- Analysis Card -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="4dp"
+            android:layout_marginBottom="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:id="@+id/emotionResultText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="😊 Feeling: Happy"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:layout_marginBottom="8dp"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/motivationalQuoteText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="🌟 Keep pushing forward!"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:fontFamily="serif"
+                    android:textStyle="italic"
+                    android:padding="12dp"
+                    android:background="@drawable/quote_background"
+                    android:layout_marginBottom="8dp"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/activitySuggestionText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="🏃 Go for a short walk"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:padding="12dp"
+                    android:background="@drawable/suggestion_background"
+                    android:layout_marginBottom="8dp"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/summaryText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="📝 Summary of your day..."
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:padding="12dp"
+                    android:background="@drawable/suggestion_background"
+                    android:visibility="gone" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+    </LinearLayout>
+</ScrollView>
